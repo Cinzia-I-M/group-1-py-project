@@ -8,7 +8,7 @@ response = requests.get(url)
 character = response.json()
 
 def welcome_message():
-    print("Welcome to the Harry Potter Battle Game! Follow the instructions and beat your opponent to win. \nYou and the computer start with 100 health and the first one to get to 0 loses. \nFirst, you need to know the special powers of each house. \nGryffindor: +10% damage -5% healing. \nSlytherin: +8% damage -4% healing. \nRavenclaw: -5% damage +10% healing. \nHufflepuff: -4% damage +8% healing. \nGood luck! \n ")
+    print("\nWelcome to the Harry Potter Battle Game! Follow the instructions and beat your opponent to win. \nYou and the computer start with 100 health and the first one to get to 0 loses. \nFirst, you need to know the special powers of each house. \nGryffindor: +10% damage -5% healing. \nSlytherin: +8% damage -4% healing. \nRavenclaw: -5% damage +10% healing. \nHufflepuff: -4% damage +8% healing. \nGood luck! \n ")
 
 user_team = []
 
@@ -99,7 +99,7 @@ def random_damage_spell(): # Gets a random damage spell based on the id numbers 
     random_damage = random.choice(damage_spells)
     for i in spell:
         if str(random_damage) == str(i['id']):
-            print(f"{i['spell']}, {i['use']}")
+            print(f"Damage: {i['spell']}, {i['use']}")
             damage_num += random_damage
     if (spell_count % 2) == 0:
         damage_value('user')
@@ -115,7 +115,7 @@ def random_healing_spell(): # Gets a random healing spell based on the id number
     random_healing = random.choice(healing_spells)
     for i in spell:
         if str(random_healing) == str(i['id']):
-            print(f"{i['spell']}, {i['use']}")
+            print(f"Healing: {i['spell']}, {i['use']}")
             healing_num =+ random_healing
     if (spell_count % 2) == 0:
         heal_value('user')
