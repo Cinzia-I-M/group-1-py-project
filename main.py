@@ -251,9 +251,9 @@ def play_game(): # The whole game
     global comp_health
     welcome_message()
     your_characters()
-    print(f"Your team is: {user_team}.\n")
+    print(f"Your team is: {' - '.join(user_team)}.\n")
     random_team()
-    print(f"The computer's team is: {comp_team}\n")
+    print(f"The computer's team is: {' - '.join(comp_team)}\n")
     special_powers(user_team)
     special_powers(comp_team)
     game_round()
