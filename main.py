@@ -16,7 +16,7 @@ spell_count = 0
 
 def your_characters(): # This gets 3 characters for the user's team
     while len(user_team) < 3:
-        print(f"Pick character {len(user_team)+1} by typing their name: ")
+        print(f"Team member {len(user_team)+1}: choose a Harry Potter character: ")
         character_name = input().title()
         global chars
         chars = []
@@ -124,14 +124,14 @@ def random_healing_spell(): # Gets a random healing spell based on the id number
     spell_count += 1
 
 def spell_choice(): # Gets user to pick either a damage or a healing spell
-    print("Do you want to use a healing spell or a damage spell?: ")
+    print("Do you want to use a \033[92mhealing\033[0m spell or a \033[91mdamage\033[0m spell?: ")
     user_spell = input().capitalize()
     if user_spell == 'Damage':
         random_damage_spell()
     elif user_spell == 'Healing':
         random_healing_spell()
     else:
-        print("Try typing either damage or healing.")
+        print("Try typing either damage or healing.\n")
         spell_choice()
 
 def spell_comp(): # Picks a random spell for the computer, either damage or healing
