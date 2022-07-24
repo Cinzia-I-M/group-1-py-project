@@ -1,3 +1,5 @@
-print('\033[1m' + 'Hello')
-print('\033[93m' + 'Hello')
-print('lo')
+
+
+print(f"Pick character {len(user_team)+1} by typing a name: ")
+
+print(f"Team member {len(user_team)+1}: choose a Harry Potter character: ")
