@@ -2,6 +2,9 @@ import random
 import requests
 import math
 import sys
+import colorama
+from colorama import init
+init()
 
 url = 'http://hp-api.herokuapp.com/api/characters'
 response = requests.get(url)
