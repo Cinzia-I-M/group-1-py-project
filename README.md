@@ -23,23 +23,27 @@ I chose to use a [Harry Potter API](https://hp-api.herokuapp.com/) to create a s
 
 :magic_wand: Modular functions for code efficiency
 
+# System requirements
+
+- [Python 3.9.13^](https://www.python.org/downloads/)
+- [Requests](https://pypi.org/project/requests/) installed
+- [Colorama](https://pypi.org/project/colorama/) installed
+
 ## How to run the game :owl:
 
-1. Make sure you have [Python](https://www.python.org/downloads/) installed
-
-2. Clone the repository to your desired location
+1. Clone the repository to your desired location
 
     `git clone https://github.com/Cinzia-I-M/harry-potter-battle-game.git`
 
-3. Enter the repository directory via command line
+2. Enter the repository directory via command line
 
     `cd harry-potter-battle-game`
 
-4. Run the script
+3. Run the script
 
     `python harrypotter.py`
 
-5. Enjoy playing!
+4. Enjoy playing!
 
 # Play the game!
 
