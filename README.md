@@ -23,7 +23,7 @@ I chose to use a [Harry Potter API](https://hp-api.herokuapp.com/) to create a s
 
 :magic_wand: Modular functions for code efficiency
 
-# System requirements
+## System requirements and dependencies
 
 - [Python 3.9.13^](https://www.python.org/downloads/)
 - [Requests](https://pypi.org/project/requests/) installed
