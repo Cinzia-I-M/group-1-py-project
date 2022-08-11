@@ -15,7 +15,7 @@ I chose to use a [Harry Potter API](https://hp-api.herokuapp.com/) to create a s
 
 :magic_wand: Houses have ‘special powers’ with damage/healing modifications
 
-:magic_wand: Random spell chosen via [different API](https://harry-potter-api-english-production.up.railway.app) based on healing or damage selection
+:magic_wand: Random spell chosen via a [different API](https://fedeperin-harry-potter-api-en.herokuapp.com) based on healing or damage selection
 
 :magic_wand: Text interface embellishments
 
