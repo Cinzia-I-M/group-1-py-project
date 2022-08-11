@@ -10,7 +10,7 @@ url = 'http://hp-api.herokuapp.com/api/characters'
 response = requests.get(url)
 character = response.json()
 
-url = 'https://harry-potter-api-english-production.up.railway.app/spells'
+url = 'https://fedeperin-harry-potter-api-en.herokuapp.com/spells'
 response = requests.get(url)
 spell = response.json()
 
