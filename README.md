@@ -33,7 +33,7 @@ I chose to use a [Harry Potter API](https://hp-api.herokuapp.com/) to create a s
 
 3. Enter the repository directory via command line
 
-    `cd harrypotter.py`
+    `cd harry-potter-battle-game`
 
 4. Run the script
 
