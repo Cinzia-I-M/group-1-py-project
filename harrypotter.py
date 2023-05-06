@@ -6,13 +6,13 @@ import colorama
 from colorama import init
 init()
 
-url = 'http://hp-api.herokuapp.com/api/characters'
+url = 'https://hp-api.onrender.com/api/characters'
 response = requests.get(url)
 character = response.json()
 
-url = 'https://fedeperin-harry-potter-api-en.herokuapp.com/spells'
+url = 'https://hp-api.onrender.com/api/spells'
 response = requests.get(url)
-spell = response.json()
+spells = response.json()
 
 user_team = []
 spell_count = 0
@@ -23,19 +23,19 @@ user_health = 100
 comp_health = 100
 
 # This assigns spells to variables so below I can get them to affect the health in different amounts
-five_damage = [2,8,29,30,33,35,37,58,66,69]
-ten_damage = [1,4,10,24,39,42,43,50,53]
-fifteen_damage = [6,15,21,41,59,64]
-twenty_damage = [17,20,34,54,70]
-twentyFive_damage = [16,48,67]
-thirty_damage = [22,28,51,62,68,71,72]
-oneHundred_damage = [36]
-five_healing = [45,65]
-ten_healing = [60]
-fifteen_healing = [9,18,23,40]
-twenty_healing = [3,44]
-twentyFive_healing = [31]
-thirty_healing = [13]
+five_damage = ['Accio','Alohomora', 'Avis', 'Evanesco', 'Impedimenta', 'Petrificus Totalus', 'Rictusempra', 'Wingardium Leviosa']
+ten_damage = ['Ascendio', 'Confundo', 'Expelliarmus', 'Incendio', 'Locomotor Mortis', 'Tarantallegra']
+fifteen_damage = ['Aparecium', 'Finite Incantatem', 'Levicorpus', 'Stupefy']
+twenty_damage = ['Bombardo', 'Immobulus', 'Reducto']
+twentyFive_damage = ['Conjunctivitis Curse', 'Fiendfyre Curse']
+thirty_damage = ['Crucio', 'Imperio', 'Sectumsempra']
+oneHundred_damage = ['Avada Kedavra']
+five_healing = ['Episkey']
+ten_healing = ['Apparate']
+fifteen_healing = ['Ferula']
+twenty_healing = ['Aguamenti', 'Reparifors']
+twentyFive_healing = ['Protego', 'Renneverate']
+thirty_healing = ['Anapneo', 'Brackium Emendo', 'Expecto patronum']
 
 def welcome_message():
     print("\nWelcome to the Harry Potter Battle Game! Follow the instructions and beat your opponent to win. \nYou and the computer start with 100 health and the first one to get to 0 loses. \nFirst, you need to know the special powers of each house. \nGryffindor: +10% damage -5% healing. \nSlytherin: +8% damage -4% healing. \nRavenclaw: -5% damage +10% healing. \nHufflepuff: -4% damage +8% healing. \nGood luck! \n ")
@@ -125,12 +125,12 @@ def special_powers(team): # This works out the additional/minus damage and heali
 def random_damage_spell(): # Gets a random damage spell based on the id numbers I've selected
     global damage_num
     global spell_count
-    damage_num = 0
-    damage_spells = 1, 2, 4, 6, 8, 10, 15, 16, 17, 20, 21, 22, 24, 28, 29, 30, 33, 34, 35, 36, 37, 39, 41, 42, 43, 48, 50, 51, 53, 54, 58, 59, 62, 64, 66, 67, 68, 69, 70, 71, 72
+    damage_num = ''
+    damage_spells = ['Accio','Alohomora', 'Avis', 'Evanesco', 'Impedimenta', 'Petrificus Totalus', 'Rictusempra', 'Wingardium Leviosa', 'Ascendio', 'Confundo', 'Expelliarmus', 'Incendio', 'Locomotor Mortis', 'Tarantallegra', 'Aparecium', 'Finite Incantatem', 'Levicorpus', 'Stupefy', 'Bombardo', 'Immobulus', 'Reducto', 'Conjunctivitis Curse', 'Fiendfyre Curse', 'Crucio', 'Imperio', 'Sectumsempra', 'Avada Kedavra']
     random_damage = random.choice(damage_spells)
-    for i in spell:
-        if str(random_damage) == str(i['id']):
-            print(f"\033[91mDamage\033[0m: {i['spell']}, {i['use']}")
+    for i in spells:
+        if random_damage == i['name']:
+            print(f"\033[91mDamage\033[0m: {i['name']}, {i['description']}")
             damage_num += random_damage
     if (spell_count % 2) == 0:
         damage_value('user')
@@ -141,13 +141,13 @@ def random_damage_spell(): # Gets a random damage spell based on the id numbers 
 def random_healing_spell(): # Gets a random healing spell based on the id numbers I've selected
     global healing_num
     global spell_count
-    healing_num = 0
-    healing_spells = 3, 9, 13, 18, 23, 31, 40, 44, 45, 60, 65
+    healing_num = ''
+    healing_spells = ['Episkey', 'Apparate', 'Ferula', 'Aguamenti', 'Reparifors', 'Protego', 'Renneverate', 'Anapneo', 'Brackium Emendo', 'Expecto patronum']
     random_healing = random.choice(healing_spells)
-    for i in spell:
-        if str(random_healing) == str(i['id']):
-            print(f"\033[92mHealing\033[0m: {i['spell']}, {i['use']}")
-            healing_num =+ random_healing
+    for i in spells:
+        if random_healing == i['name']:
+            print(f"\033[92mHealing\033[0m: {i['name']}, {i['description']}")
+            healing_num += random_healing
     if (spell_count % 2) == 0:
         heal_value('user')
     else:
