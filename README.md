@@ -11,17 +11,17 @@ I chose to use a [Harry Potter API](https://hp-api.herokuapp.com/) to create a s
 
 ## Key Features
 
-:magic_wand: Text input for character selection via API
+:sparkles: Text input for character selection via API
 
-:magic_wand: Houses have ‘special powers’ with damage/healing modifications
+:sparkles: Houses have ‘special powers’ with damage/healing modifications
 
-:magic_wand: Random spell chosen via a [different API](https://fedeperin-harry-potter-api-en.herokuapp.com) based on healing or damage selection
+:sparkles: Random spell chosen via a [different API](https://fedeperin-harry-potter-api-en.herokuapp.com) based on healing or damage selection
 
-:magic_wand: Text interface embellishments
+:sparkles: Text interface embellishments
 
-:magic_wand: Filtered text input to assist user experience
+:sparkles: Filtered text input to assist user experience
 
-:magic_wand: Modular functions for code efficiency
+:sparkles: Modular functions for code efficiency
 
 ## System requirements and dependencies
 
@@ -54,5 +54,5 @@ I chose to use a [Harry Potter API](https://hp-api.herokuapp.com/) to create a s
 - Then you start the battle! Pick a damage spell to start. This will harm the computer's health.
 - The computer then picks either a damage or healing spell.
 - This goes on until one of you reaches 0 health.
-- Beware of Avada Kedavra (**The Killing Curse**) as this will kill instantly! :magic_wand:
+- Beware of Avada Kedavra (**The Killing Curse**) as this will kill instantly! :snake:
 - At the end you can choose to play again or not.
